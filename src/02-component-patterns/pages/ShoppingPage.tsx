@@ -1,0 +1,33 @@
+import React from 'react'
+import { ProductButtons, ProductCard, ProductImage, ProductTitle } from '../components'
+
+const product = {
+  id: '1',
+  title: 'Coffee Mug - Card',
+  // img: './coffee-mug.png'
+}
+
+export const ShoppingPage = () => {
+  return (
+    <div>
+      <h1>Shopping Store</h1>
+      <hr />
+      <div style={{
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap'
+      }}>
+        <ProductCard product={product}>
+          <ProductCard.Image img={"https://pbs.twimg.com/profile_images/1477300100506562561/HT58EqTI_400x400.jpg"} />
+          <ProductCard.Title title="Café Bar" />
+          <ProductCard.Buttons />
+        </ProductCard>
+        <ProductCard product={product}>
+          <ProductImage />
+          <ProductTitle />
+          <ProductButtons />
+        </ProductCard>
+      </div>
+    </div>
+  )
+}
